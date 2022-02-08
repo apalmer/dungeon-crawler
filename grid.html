@@ -1,0 +1,91 @@
+<script>
+  export let name;
+</script>
+
+<main>
+  <div class="wrapper">
+    <nav class="nav-wrapper">
+      <ul class="ul-wrapper">
+        <li class="north">N</li>
+        <li class="south">S</li>
+        <li class="west">W</li>
+        <li class="east">E</li>
+      </ul>
+    </nav>
+    <div class="viewer">
+      <h1>Hi {name}!</h1>
+    </div>
+  </div>
+</main>
+
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    gap: 10px;
+    grid-auto-rows: 1fr 10fr 1fr;
+  }
+
+  .nav-wrapper {
+    background-color: rgba(88, 171, 233, .3);
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    display: flex;
+  }
+
+  .ul-wrapper {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(88, 171, 233, .3);
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    gap: 10px;
+    grid-auto-rows: 1fr 10fr 1fr;
+  }
+
+  .north {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .south {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .west {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .east {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  div {
+    border: 2px solid rgb(233, 171, 88);
+    border-radius: 5px;
+    background-color: rgba(233, 171, 88, .3);
+    padding: 1em;
+    color: #d9480f;
+  }
+
+  .viewer {
+    grid-column: 2;
+    grid-row: 2;
+  }
+</style>
