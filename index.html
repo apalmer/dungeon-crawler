@@ -1,23 +1,74 @@
 <script>
-  export let name;
 </script>
 
 <main>
   <section>
     <header />
-    <nav>
-      <ul>
-	<li class="navigation north"><a href="">North</a></li>
-        <li class="navigation south"><a href="">South</a></li>
-        <li class="navigation east"><a href="">East</a></li>
-        <li class="navigation west"><a href="">West</a></li>
-      </ul>
-    </nav>
-    <section class="viewer" >
-    </section>
+    <div class="outer-wrapper">
+      <nav class="nav-wrapper">
+        <div class="north"><a href="www.google.com?q=north">NORTH</a></div>
+        <div class="south"><a href="www.google.com?q=south">SOUTH</a></div>
+        <div class="west"><a href="www.google.com?q=west">WEST</a></div>
+        <div class="east"><a href="www.google.com?q=east">EAST</a></div>
+      </nav>
+      <div class="content-wrapper">inner</div>
+    </div>
     <footer />
   </section>
 </main>
 
 <style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  main,
+  main section {
+    width: 100%;
+    height: 100%;
+  }
+  .outer-wrapper {
+    background-color: grey;
+    position: relative;
+    width: 100%;
+    height: 75%;
+  }
+  .nav-wrapper {
+    background-color: azure;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  .north {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+  }
+  .south {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+  }
+  .west {
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+  }
+  .east {
+    position: absolute;
+    bottom: 50%;
+    right: 0px;
+  }
+  .content-wrapper {
+    background-color: beige;
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+  }
 </style>
